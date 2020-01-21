@@ -147,7 +147,14 @@ Repeat 2.d for all other channels, ``Ex_1_Em_1`` and ``Ex_2_Em_2``
 *OPTIONAL STEP* - If you intend to create your own set of points used in alignment or are not aligning your brain to the Allen Brain Atlas, please see the Shield-2018 manual section C, steps vi-xi for instructions
 
 To begin the automated alignment process, first you must perform image correction that is unique to your data (e.g. flipping and cropping) - see Section C, step xii-xiii for more details. FOr the example data, we entered the following commands:
+The files are included in the "/allen-mouse-brain-atlas" folder. 
 
+|File Name | Description |
+| ------------- |:-------------:|
+| autofluorescence_25_half_sagittal.tif | a 3D image of the autofluorescence channel for the mid-sagittal sectioning of the Allen Mouse Brain atlas reference (to be used in place of "/reference/reference.tiff").|
+| annotation_25_half_sagittal.tif | a 3D segmentation of the Allen Mouse Brain reference (to be used in place of "/reference/segmentation.tiff") |
+| coords_25_half_sagittal.json | the coordinates of key points on the reference (to be used in place of "/reference/points.json") |
+| AllBrainRegions.csv |  a mapping of region ID numbers in the segmentation to names of regions. |
 ```sh
 rescale-image-for-alignment --input "/data/stitched_data/Ex_0_Em_0_master/*.tiff" --atlas-file /allen-mouse-brain-atlas/autofluorescence_25_half_sagittal.tif --output /data/downsampled_flip-x_flip-z_clip-y-0-9800.tiff --flip-x --flip-z --clip-y 0,9800
 ```
