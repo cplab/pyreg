@@ -1,6 +1,12 @@
 # pyreg
 Image registration package for python
 
+# Introduction
+The goal of this image processing pipeline is to be able to 
+efficiently process 3D light-sheet images of mouse brains with a set of
+cell bodies lit up via fluorescent tags from FisTRAP mice and immunohistochemically
+based. 
+
 # Steps of the Image Processing pipeline
 1) preprocesing and quality control (destriping)
 2) stitching data for atlas alignment
