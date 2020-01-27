@@ -1,6 +1,19 @@
 # pyreg
 Image registration package for python
 
+# Introduction
+The goal of this image processing pipeline is to be able to 
+efficiently process 3D light-sheet images of mouse brains with a set of
+cell bodies lit up via fluorescent tags from FisTRAP mice and immunohistochemically
+based. 
+
+# Steps of the Image Processing pipeline
+1) preprocesing and quality control (destriping)
+2) stitching data for atlas alignment
+3) registering to a standard mouse atlas [The Allen CCF v3](http://help.brain-map.org/display/mousebrain/API) or 
+  [Enhanced and Unified Anatomical Labeling for a Common Mouse Brain Atlas](https://www.biorxiv.org/content/10.1101/636175v1)
+4) visualization (Vaa3d, Imaris, Arivis 4D, and FuJI)
+5) segmenation and cell counting [U-Net: deep learning for cell counting, detection, and morphometry](https://www.nature.com/articles/s41592-018-0261-2)
 
 # General stuff
 
